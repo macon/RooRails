@@ -1,0 +1,17 @@
+<%= form_for(@sheet2) do |f| %>
+  <% if @sheet2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sheet2.errors.count, "error") %> prohibited this sheet2 from being saved:</h2>
+
+      <ul>
+      <% @sheet2.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

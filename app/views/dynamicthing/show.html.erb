@@ -1,0 +1,9 @@
+<h1>dynamic thing</h1>
+
+<%= @dynamic_thing.ss_name %>
+
+<ul>
+    <% @dynamic_thing.get_values.each do |value| %>
+    <li><%= value %></li>
+    <% end %>
+</ul>
