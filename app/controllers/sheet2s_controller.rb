@@ -1,10 +1,10 @@
+
 class Sheet2sController < ApplicationController
   # GET /sheet2s
   # GET /sheet2s.xml
   def index
-    @sheet2s = Sheet2.all
-    @cell_value = Sheet2.get_ss_value
     #@cell_value = "Hello dopey"
+    @files = Sheet2sHelper.files
 
     respond_to do |format|
       format.html  # index.html.erb

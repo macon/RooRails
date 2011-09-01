@@ -1,2 +1,7 @@
-<h2>Listing sheet</h2>
+<h1>Folder contents</h1>
 
+<ul>
+    <% @files.each do |filename| %>
+    <li><%= link_to filename, "/dynamic/#{filename.split('.')[0]}" %></li>
+    <% end %>
+</ul>

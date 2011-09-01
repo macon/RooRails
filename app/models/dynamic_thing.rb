@@ -6,7 +6,8 @@ class DynamicThing
     #s = Openoffice.new("myspreadsheet.ods")      # creates an Openoffice Spreadsheet instance
     #s = Excel.new("myspreadsheet.xls")           # creates an Excel Spreadsheet instance
     #s = Google.new("myspreadsheetkey_at_google") # creates an Google Spreadsheet instance
-    @ss_sheet = Excelx.new("/home/macon/Documents/#{@ss_name}")         # creates an Excel Spreadsheet instance for Excel .xlsx files
+
+    @ss_sheet = Excelx.new("#{Sheet2sHelper::HomeFolder + @ss_name}")         # creates an Excel Spreadsheet instance for Excel .xlsx files
 
     @ss_sheet.default_sheet = @ss_sheet.sheets.first  # first sheet in the spreadsheet file will be used
 
@@ -22,3 +23,4 @@ class DynamicThing
     @ss_sheet.column(1)                                 # returns the content of the first row/first cell in the sheet
   end
 end
+

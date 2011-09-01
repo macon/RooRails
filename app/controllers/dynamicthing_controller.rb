@@ -1,6 +1,6 @@
 class DynamicthingController < ApplicationController
   def index
-    @dynamic_thing = DynamicThing.new("test2")
+    @dynamic_thing = DynamicThing.new("test")
 
     respond_to do |format|
       format.html  # index.html.erb

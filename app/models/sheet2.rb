@@ -20,4 +20,5 @@ class Sheet2 < ActiveRecord::Base
 
     s.column(1)                                 # returns the content of the first row/first cell in the sheet
   end
+
 end
